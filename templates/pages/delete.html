@@ -12,19 +12,20 @@
       </div>
       <!-- /.card-header -->
       <!-- form start -->
-      <form  method="POST" enctype="multipart/form-data">
+      <form  method="POST" enctype="multipart/form-data"> 
+      {% csrf_token %}
       
         <div class="row">
           
-       <p class="p-3">هل تريد حقاً حذف الكتاب؟</p>
+       <p class="p-3">?you want to delete the book</p>
    
         </div>
         <!-- /.card-body -->
   
         <div class="card-footer">
-          <button type="submit" class="btn btn-danger">حذف</button>
+          <button type="submit" class="btn btn-danger">delete</button>
   
-          <button data-target="#" type="submit" class="btn btn-success">تراجع</button>
+          <a href="{% url 'index' %}" type="button" class="btn btn-primary">cancel</a>
         </div>
       </form>
     </div>
